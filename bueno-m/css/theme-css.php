@@ -307,13 +307,9 @@ $submenu_borderseperatorcolor = ot_get_option( 'submenu_borderseperatorcolor', '
 box-shadow:  0px 0px 5px 4px rgba(0, 0, 0, 0.3);
 }
 #toolbar{
-<?php array_walk($tcustomizer_topheaderbackground,'wmf_background_map')?>
-height: <?php echo $tcustomizer_topheaderheight;?>px;
-<?php
-if($tcustomizer_topheaderbackground != '' && $tcustomizer_topheaderbackground2 != ''){
-	backgroundgradient('rgba('.mobilihex2rgb($tcustomizer_topheaderbackground['background-color']).', '.$topbar_opacity.')','rgba('.mobilihex2rgb($tcustomizer_topheaderbackground2).', '.$topbar_opacity.')');
+	background:rgba(255, 255, 255, 0.75);
+    border-bottom:3px solid #f05a28;
 }
-?>}
 
 <?php if($custom_menu_bg['background-color'] != '' || $custom_menu_bg['background-image'] != ''){ ?>
 .snap-drawers{<?php array_walk($custom_menu_bg,'wmf_background_map')?>}
