@@ -359,10 +359,10 @@ if($menusettings_customrighticon != ''){
 ?>
 
 
-#toggle-left{  background:url(../images/open.png) center center no-repeat;  background-size:18px 12px;  display:block;  width:44px;  height:44px; }
+#toggle-left{  background:url(../images/open.png) center center no-repeat;  background-size:18px 12px;  display:block;  width:44px;  height:60px; }
 
 <?php if($menusettings_left == 1){//Left Active?>
-#toggle-right{  background:url(../images/open.png) center center no-repeat;  background-size:18px 12px;  display:block;  width:44px;  height:44px;  float:right;  margin-top:-44px}
+#toggle-right{  background:url(../images/open.png) center center no-repeat;  background-size:18px 12px;  display:block;  width:44px;  height:44px;  float:right;  margin-top:-48px}
 <?php }else{?>
 #toggle-right{  background:url(../images/open.png) center center no-repeat;  background-size:18px 12px;  display:block;  width:44px;  height:44px;  float:right}
 <?php }?>
