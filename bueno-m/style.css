@@ -61,7 +61,7 @@ box-shadow: inset 0 -1px 0 rgba(0,0,0,0.075),inset 0 1px 0 rgba(255,255,255,0.3)
 .woocommerce .cart_totals  h2{text-align:left!important;}
 .woocommerce .shipping_calculator {width:100%!important;}
 .woocommerce .shipping_calculator  h2{text-align:left!important;}
-.woocommerce-page #mobilicontent{height:100%!important;}
+.woocommerce-page #mobilicontent{height:100%!important; background:url(images/common/white_wall_@2X.png); background-size:contain;}
 #customer_details .col-1,#customer_details .col-2, #customer_login .col-1, #customer_login .col-2{width:100%!important;}
 .woocommerce-page h1{font-size: 20px!important; margin-bottom: 12px!important;line-height: 20px!important;}
 .woocommerce-page h2{font-size: 18px!important; margin-bottom: 12px!important;line-height: 18px!important;}
@@ -830,3 +830,9 @@ padding-right: 14px;
 font-weight: 400;
 }
 .wmfbreadcrumbs a i{ font-size:18px;}
+
+
+/* Bueno Overrides */
+#maincontent {
+	touch-action:auto !important;
+}
