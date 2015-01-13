@@ -1,0 +1,5 @@
+/* CSS Document */
+html, body, .snap-content, #maincontent {height:100%!important; }
+#toolbar{display:block;}
+#toggle-left{ background:url(../images/openie8.png) center center no-repeat;}
+#toggle-right{ background:url(../images/openie8.png) center center no-repeat;}
