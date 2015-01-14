@@ -598,6 +598,29 @@ function mobilit2dcomments($comment, $args, $depth)
 	<?php endif; ?>
 <?php }
 
+// restrict a category over shop page
+add_action( 'pre_get_posts', 'bueno_custom_pre_get_posts_query' );
+function bueno_custom_pre_get_posts_query( $q ) {
+	//global $woocommerce;
+	//global $wp_query;
+	if ( ! $q->is_main_query() ) return;
+	if ( ! $q->is_post_type_archive() ) return;
+	
+	if ( ! is_admin() && is_shop() ) {
+
+		$q->set( 'tax_query', array(array(
+			'taxonomy' => 'product_cat',
+			'field' => 'slug',
+			'terms' => array( 'package', 'service' ),
+			'operator' => 'NOT IN'
+		)));
+	
+	}
+	remove_action( 'pre_get_posts', 'bueno_custom_pre_get_posts_query' );
+
+}
+
+
 
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
