@@ -148,13 +148,7 @@
                 <div id="toolbar">
                         <a href="#" id="toggle-left"></a>
                         <span id="toggle-left-text" class="left-menu-text"><?php echo $menusettings_lefttext;?></span>
-                    	<h1><?php
-						if($logosettings_image != ""){ 
-						echo '<span class="mobililogoimg"></span>';
-						}else{
-						echo $logosettings_logotext;
-						}
-						?></h1>
+                    	<h1><img src="http://stepoutsolutions.org/projects/bueno/wp-content/themes/Bueno/images/header-logo.png" style="width: 124px;"></h1>
                         <span id="toggle-right-text" class="right-menu-text"><?php echo $menusettings_righttext;?></span> 
                     	<a href="#" id="toggle-right"></a>
                 </div>

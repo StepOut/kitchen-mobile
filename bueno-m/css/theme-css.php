@@ -152,7 +152,7 @@ html, body{height:100%!important;overflow:auto!important;overflow-x:hidden!impor
 /* Logo settings*/
 .mobililogoimg{
 display: block;
-background-image: url(<?php echo $logosettings_image?>);
+background-image: url(http://stepoutsolutions.org/projects/bueno/wp-content/themes/Bueno/images/header-logo.png);
 background-repeat: no-repeat;
 background-size: <?php echo ($limgwidth/2);?>px <?php echo ($limgheight/2);?>px;
 margin-right:auto;
