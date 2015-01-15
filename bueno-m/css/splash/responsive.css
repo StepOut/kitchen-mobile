@@ -39,11 +39,12 @@ body {
 	border-radius: 0;
 	color: #fff;
 	border: 1px solid #fff;
-	background: none;
+	background-color: rgba(0,0,0,0.4);
 	text-transform: uppercase;
 	font-weight: 700;
 	width:184px;
 	text-align:left;
+	font-size:36px;
 }
 .btn-light:hover, .btn-light:focus, .btn-light:active {
 	background-color: rgba(255,255,255,0.6);
@@ -333,7 +334,6 @@ footer {
  height: 40px;
 }
 .splash-section {
- width: 249px;
 }
 .splash-tagline {
  margin-top: -15px;
@@ -348,7 +348,6 @@ footer {
 	background-image:none !important;
 }
 .splash-section a {
-	width: 188px !important;
 }
 }
 
@@ -366,4 +365,13 @@ footer {
 
 /* Custom, iPhone Retina */ 
 @media only screen and (max-width : 320px) {
+}
+
+
+.btn-splash {
+	width:100%;
+	background: rgba(0,0,0,0.3);
+	border: 1px solid #000;
+	border-radius: 0px;
+	font-size:26px;
 }
