@@ -1,71 +1,30 @@
-<?php get_header(); ?>
-	<?php if(!is_page()){?>
-	<div class="wmffcontainer">
-    	<div class="post-padding"></div>
-	<?php }?>
-	<!-- Section -->
-	<section>
-	
-	
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-	<?php if(!is_page()){?>
-    	<div class="wmffrow">
-        	<div class="col-12 wmffcol-xs-12 wmffcol-sm-12 wmffcol-md-12 wmffcol-lg-12">
-	<?php }?>
-		<!-- Article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			
-			<?php if(!is_page() || !is_front_page()){?>
-			<?php 
-                    if ( function_exists( 'get_post_format' )){
-                            
-                        if(!get_post_format( $post->ID )){
-							?>
-                            
-                            <div class="post-mtitle"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></div>
-                            <div class="post-content">
-                            <?php mobiliwp_excerpt();?>
-                            </div>
-                            <div class="post-minfo"><?php the_time('F j, Y'); ?> / <?php comments_popup_link( '', __( '1 Comment / ', 'mobilit2d' ), __( '% Comments / ', 'mobilit2d' )); ?><?php _e( 'by', 'mobilit2d' ); ?> <?php the_author_posts_link(); ?> <?php echo "/  "; the_tags(); ?></div>
+<?php defined('ABSPATH') or die("No script kiddies please!"); ?>
+<!-- Bootstrap Core CSS -->
+<link href="<?php echo get_stylesheet_directory_uri(); ?>/kitchen/css/splash/bootstrap.min.css" rel="stylesheet">
 
-                            <?php
-                        }else{
-                            get_template_part('content',get_post_format());
-                        }
-                    }
-                    ?>
-            <?php }else{?>     
-			<?php the_content(); ?>
-			<?php }?>		
-		</article>
-		<!-- /Article -->
-		 <?php if(!is_page() || !is_front_page()){?>
-		</div></div>
-		<?php }?>
-		
-	<?php endwhile; ?>
-	<?php get_template_part('pagination'); ?>
-	<?php else: ?>
-	<?php if(!is_page()){?>
-    	<div class="wmffrow">
-        	<div class="col-12 wmffcol-xs-12 wmffcol-sm-12 wmffcol-md-12 wmffcol-lg-12">
-	<?php }?>
-		<!-- Article -->
-		<article>
-			
-			<h3><?php _e( 'Sorry, nothing to display.', 'webbu' ); ?></h3>
-			
-		</article>
-		<!-- /Article -->
-		
-		 <?php if(!is_page()){?>
-	</div></div>
-	<?php }?>
-	<?php endif; ?>
-	
-	</section>
-	<!-- /Section -->
-    <?php if(!is_page()){?>
-	</div>
-	<?php }?>
-<?php get_footer(); ?>
+<!-- Custom CSS -->
+<link href="<?php echo get_stylesheet_directory_uri(); ?>/kitchen/css/splash/responsive.css" rel="stylesheet">
+<link href="<?php echo get_stylesheet_directory_uri(); ?>/kitchen/css/splash/style.css" rel="stylesheet">
+
+<header id="top" class="header">
+  <div class="text-vertical-center"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/titles/splash-01.png" class="img-responsive" style="margin:100px auto auto auto;" /> 
+    <!--div class="splash-logo"><img src="kitchen/images/splash-logo.png" /></div>
+    <h1 class="splash-title">Goodness</h1>
+    <div class="splash-section">
+      <div class="lato-regular desktop-only" id="splash-taglines-container">
+        <h5>Global Cuisine</h5>
+        <h5>Delivery and Service</h5>
+        <h5>Catering For All Occasions</h5>
+      </div>
+      <div class="splash-tagline desktop-only"><img src="kitchen/images/inside-trail.png" /></div>
+      <div class="splash-tagline mobile-only"><img src="kitchen/images/inside.png" /></div>
+    </div--> 
+    <br clear="all">
+    <div class="splash-section" style="margin-bottom:10px;"> <a href="home" class="btn btn-light btn-splash">Explore<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-splash-proceed.png"></a> </div>
+    <div class="splash-section"> <a href="order" class="btn btn-light btn-splash">Order<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-splash-proceed.png"></a> </div>
+    <!--div class="splash-section mobile-only"> <a href="order/order-static" class="btn btn-light btn-splash">Order.<img src="<?php //echo get_stylesheet_directory_uri(); ?>/images/icon-splash-proceed.png"></a> </div-->
+  </div>
+  </div>
+</header>
+
+<!-- footer area of page -->
