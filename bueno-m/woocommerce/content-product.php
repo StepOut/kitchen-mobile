@@ -35,6 +35,7 @@ if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 
 if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 	$classes[] = 'last';
 ?>
+<?php if(is_shop() || is_product()){ ?>
 <!-- product tile -->
 <li <?php post_class( $classes ); ?> id="bueno-product-tiles">
   <?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
@@ -129,6 +130,8 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
   </div> 
 </li>
 <!-- end of product tile -->
+<?php } ?>
+
 <!-- package tile -->
 <?php
 	$term_values = get_the_terms( $product->id, 'pa_package-cuisine');
@@ -155,7 +158,8 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 		$classes[] = $color;
 	}
 ?>
-<li <?php post_class( $classes ); ?> style="display:none;" id="bueno-package-tiles">
+<?php if(is_product_category('package')){ ?>
+<li <?php post_class( $classes ); ?> id="bueno-package-tiles">
 	<div class="row" id="card">
   		<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
   		<div class="col-md-12 front">
@@ -303,4 +307,5 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
         </div>
 	</div>
 </li>
+<?php }?>
 <!-- end of package tile -->
