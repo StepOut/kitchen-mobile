@@ -1,13 +1,13 @@
 <?php defined('ABSPATH') or die("No script kiddies please!"); ?>
 <!-- Bootstrap Core CSS -->
-<link href="<?php echo get_stylesheet_directory_uri(); ?>/kitchen/css/splash/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/splash/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="<?php echo get_stylesheet_directory_uri(); ?>/kitchen/css/splash/responsive.css" rel="stylesheet">
-<link href="<?php echo get_stylesheet_directory_uri(); ?>/kitchen/css/splash/style.css" rel="stylesheet">
+<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/splash/responsive.css" rel="stylesheet">
+<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/splash/style.css" rel="stylesheet">
 
 <header id="top" class="header">
-  <div class="text-vertical-center"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/titles/splash-01.png" class="img-responsive" style="margin:100px auto auto auto;" /> 
+  <div class="text-vertical-center"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/splash-01.png" class="img-responsive" style="margin:100px auto auto auto;" /> 
     <!--div class="splash-logo"><img src="kitchen/images/splash-logo.png" /></div>
     <h1 class="splash-title">Goodness</h1>
     <div class="splash-section">
