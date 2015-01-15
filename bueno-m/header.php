@@ -109,13 +109,14 @@
                             ?>
                             <div class="menu-search"><?php get_search_form(); ?></div>
                             <?php }?>
+                            
+                            <?php if($menusettings_leftsidebararea == 1){get_sidebar('left');} ?>
                             <?php if($menusettings_leftmenuarea == 1){?>
                             <nav id="nav-main" class="mobili-nav" role="navigation">
+                            <h4 style="color:#fff; margin-left:14px;">Navigation</h4>
                                 <?php mobili_left_nav(); ?>
                             </nav>
                             <?php }?>
-                            
-                            <?php if($menusettings_leftsidebararea == 1){get_sidebar('left');} ?>
                           
                         </div>
                    
