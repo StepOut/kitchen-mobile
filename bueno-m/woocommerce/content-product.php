@@ -36,13 +36,27 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 	$classes[] = 'last';
 ?>
 <!-- product tile -->
-<li <?php post_class( $classes ); ?>>
-
-	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
-
-
-		<?php
+<li <?php post_class( $classes ); ?> id="bueno-product-tiles">
+  <?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
+  <div class="col-md-6">
+    <div class="food-label">
+      <?php
+			$term_values = get_the_terms( $product->id, 'pa_preference');
+			if($term_values){
+				foreach ( $term_values as $term_value ) {
+        			if($term_value->name == 'Veg'){
+						echo '<div class="veg"></div>';
+            		}
+					else
+						echo '<div class="non-veg"></div>';
+				}
+			}
+		?>
+    </div>
+    <div class="product-image">
+      <?php
 			/**
+			 * shows product image
 			 * woocommerce_before_shop_loop_item_title hook
 			 *
 			 * @hooked woocommerce_show_product_loop_sale_flash - 10
@@ -50,9 +64,16 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 			 */
 			do_action( 'woocommerce_before_shop_loop_item_title' );
 		?>
-		<div class="row">
-		<h3><?php the_title(); ?></h3>
-        <?php
+    </div>
+    <div class="product-social-links">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="row">
+      <h3>
+        <?php the_title(); ?>
+      </h3>
+      <?php
 			/**
 			 * bueno_product_desc_after_title
 			 * shows product description
@@ -60,10 +81,22 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 			 
 			do_action( 'bueno_product_desc_after_title' );
 		?>
-        </div>
-        <div class="row">
-      		<div class="other-product-details">
-		<?php
+    </div>
+    <!--<div class="content-loader"></div>-->
+    <div class="row">
+      <div class="other-product-details">
+        <?php
+				/**
+			 	* bueno_product_preparation_time hook
+				 *
+			 	*/
+				//echo '<span class="prep-time">Preperation Time';
+				//do_action( 'bueno_product_prep_time' );
+				//echo "</span>";
+			?>
+        <br />
+        <!--<span class="view-recipe">View Recipe</span> <br />-->
+        <?php
 				/**
 			 	* bueno_other_product-serves hook
 				 *
@@ -71,20 +104,29 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 				do_action( 'bueno_product_serves' );
 			?>
         <br />
-		<?php
+        <?php
+				/**
+			 	* woocommerce_after_shop_loop_item_title hook
+			 	*
+			 	* @hooked woocommerce_template_loop_rating - 5
+			 	* @hooked woocommerce_template_loop_price - 10
+			 	*/
+				do_action( 'woocommerce_after_shop_loop_item_title' );
+			?>
+             	
+      </div>
+      
+      <div class="wrapper-add-to-cart">
+      	
+        <?php 
 			/**
-			 * woocommerce_after_shop_loop_item_title hook
-			 *
-			 * @hooked woocommerce_template_loop_rating - 5
-			 * @hooked woocommerce_template_loop_price - 10
-			 */
-			do_action( 'woocommerce_after_shop_loop_item_title' );
+		 	* shows 'add to cart'
+		 	*/
+		 	do_action( 'woocommerce_after_shop_loop_item' );
 		?>
-        </div>
-
-
-	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
-
+      </div>
+    </div>
+  </div> 
 </li>
 <!-- end of product tile -->
 <!-- package tile -->
