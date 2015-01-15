@@ -36,7 +36,7 @@
         <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $iostouchicon_3;?>">
         <link rel="apple-touch-icon" sizes="144x144" href="<?php echo $iostouchicon_4;?>">
         <!-- iOS Splash screens -->
-        <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/bueno-m-scripts.js" />
+        <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/bueno-m-scripts.js"></script>
        
         <?php 
 		$splashscreen_iphone3 = ot_get_option( 'splashscreen_iphone3', '');
