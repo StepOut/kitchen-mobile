@@ -13,7 +13,7 @@
 	margin: 0px!important;
 }
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-	width: 30.8%!important;
+	width: 100%!important;
 }
 .woocommerce li.last {
 	margin-right: 0px!important;
@@ -1343,24 +1343,70 @@ h2,  h3 {
 	display: none;
 }
 .add_to_cart_button {
-	background: url(images/icon-add-to-cart.png);
+	background: url(images/icon-add-to-cart.png) !important;
 	background-repeat: no-repeat;
 	width: 60px;
 	height: 60px;
-	border: none;
-	float: right;
-	display: block;
+	border: none !important;
+	float: right !important;
+	display: block !important;
+	box-shadow:none !important;
 }
 .add_to_cart_button:hover {
-	background: url(images/icon-add-to-cart-hover.png);
+	background: url(images/icon-add-to-cart-hover.png) !important;
 }
 #right-drawer .button, #left-drawer .button {
 	border: 1px solid #fff;
 	background: none;
 	color: #fff;
 	text-shadow: none;
+	float:right;
 }
 #mobilicontent {
 	background: url(images/common/white_wall_@2X.png);
 	background-size: contain;
+}
+
+.products img {
+	width: 40%;
+	float: left;
+	margin-right: 10px;
+}
+
+.products .row {
+	width: 56%;
+	float: right;
+}
+
+.products .row h3 {
+	font-weight: 700;
+	font-size: 14px !important;
+	margin-top: -8px !important;
+	margin-bottom: -16px !important;
+}
+
+.products li {
+	border-bottom: 1px dotted #424041;
+	padding-bottom: 10px !important;
+	margin-bottom: 10px !important;
+}
+
+.products .other-product-details {
+	float:left;
+}
+
+.woocommerce-message a.button {
+	display:none !important;
+}
+
+h2 {
+	font-family:'Lato', cursive !important;
+	text-transform: uppercase !important;
+	color: #f05a28 !important;
+	font-weight: 700 !important;
+	font-style: italic !important;
+}
+
+#right-drawer .checkout {
+	display:none !important;
 }
