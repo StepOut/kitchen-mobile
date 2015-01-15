@@ -28,20 +28,16 @@ get_header( 'shop' ); ?>
         
 			<div class="page-title">
   				<h1>Bueno A La Carte</h1>
-  				<br clear="all">
   				<p class="intro">Browse through ~400 items and make your own unique menu. We have many filters in place to help you make your selection easier, faster and convenient.</p>
-  				<br>
 			</div>
             <?php }
             elseif(is_product_category('package')){ ?>
             	<div class="page-title">
 					<h1>Bueno Packages</h1>
 					<div class="tagline text-uppercase pull-right">Minimum number of people: 10</div>
-					<br clear="all">
             		<p class="intro">Bueno Packages are created to make your life easier.<br />
 If you are confused about what to order, just tell us your preferred cuisine and the number of guests & we will take care of the rest!<br />
 Enter your preferences below to get started!</p>
-					<br />
 				</div>
             <?php } ?>
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
