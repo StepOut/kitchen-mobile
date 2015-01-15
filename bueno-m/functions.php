@@ -470,6 +470,15 @@ if (function_exists('register_sidebar'))
 
 }
 
+// Display the product short description (excerpt)
+add_action('bueno_product_desc_after_title','bueno_display_product_short_desc');
+function bueno_display_product_short_desc(){
+		global $product, $woocommerce_loop;
+		$short_desc = strip_shortcodes( $product->post->post_excerpt );
+		$short_desc = strip_tags( $short_desc );
+		echo '<div class=prod-excerpt><p>'. $short_desc . '</p></div>';
+}
+
 // Display product serves
 add_action('bueno_product_serves','bueno_display_product_serves');
 function bueno_display_product_serves(){
