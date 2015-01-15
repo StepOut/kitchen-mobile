@@ -857,3 +857,12 @@ font-weight: 400;
 .addthis-toolbox {
 	display:none;
 }
+
+#right-drawer .input-lg {
+	width: 96%;
+	background: none;
+	border: 1px dotted #fff;
+	padding: 10px;
+	border-radius: 4px;
+	color:#fff;
+}
