@@ -52,7 +52,14 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 		?>
 
 		<h3><?php the_title(); ?></h3>
-
+		<?php
+				/**
+			 	* bueno_other_product-serves hook
+				 *
+			 	*/
+				do_action( 'bueno_product_serves' );
+			?>
+        <br />
 		<?php
 			/**
 			 * woocommerce_after_shop_loop_item_title hook
