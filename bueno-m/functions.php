@@ -470,6 +470,22 @@ if (function_exists('register_sidebar'))
 
 }
 
+// Display product serves
+add_action('bueno_product_serves','bueno_display_product_serves');
+function bueno_display_product_serves(){
+		global $product, $woocommerce_loop;
+		$attr_values = get_taxonomy( 'pa_serves');
+		$term_values = get_the_terms( $product->id, 'pa_serves');
+		if($attr_values && $term_values){
+			foreach ( $attr_values as $attr_value ) {
+				echo $attr_value->name;
+			}
+			foreach ( $term_values as $term_value ) {
+				echo ' : '.$term_value->name;
+			}
+		}
+}
+
 // Remove wp_head() injected Recent Comment styles
 function my_remove_recent_comments_style()
 {
