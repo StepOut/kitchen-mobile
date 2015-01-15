@@ -63,7 +63,7 @@ box-shadow: inset 0 -1px 0 rgba(0,0,0,0.075),inset 0 1px 0 rgba(255,255,255,0.3)
 .woocommerce .shipping_calculator  h2{text-align:left!important;}
 .woocommerce-page #mobilicontent{height:100%!important; background:url(images/common/white_wall_@2X.png); background-size:contain;}
 #customer_details .col-1,#customer_details .col-2, #customer_login .col-1, #customer_login .col-2{width:100%!important;}
-.woocommerce-page h1{font-size: 20px!important; margin-bottom: 12px!important;line-height: 20px!important;}
+.woocommerce-page h1{font-size: 40px!important; margin-bottom: 32px!important;line-height: 20px!important;}
 .woocommerce-page h2{font-size: 18px!important; margin-bottom: 12px!important;line-height: 18px!important;}
 .woocommerce ul.products li.product .onsale, .woocommerce-page ul.products li.product .onsale {margin: 0px 0px 0 0!important;}
 .woocommerce span.onsale, .woocommerce-page span.onsale {
@@ -858,11 +858,55 @@ font-weight: 400;
 	display:none;
 }
 
-#right-drawer .input-lg {
+#right-drawer .input-lg, .widget_wp_sidebarlogin #user_login, .widget_wp_sidebarlogin #user_pass {
 	width: 96%;
 	background: none;
 	border: 1px dotted #fff;
 	padding: 10px;
 	border-radius: 4px;
 	color:#fff;
+}
+#right-drawer .input-lg {
+	margin-top:30px;
+	margin-bottom:-10px;
+}
+
+.widget_wp_sidebarlogin form {
+	padding-left:10px;
+	width:86%;
+}
+
+#wp-submit {
+	float:right;
+}
+
+.woocommerce .woocommerce-message, .woocommerce-page .woocommerce-message {
+	border: none;
+	background: #f05a28;
+	color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.woocommerce .woocommerce-breadcrumb, .woocommerce-page .woocommerce-breadcrumb {
+	display:none;
+}
+
+.woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-message:before {
+	display:none;
+}
+
+.add_to_cart_button {
+background: url(images/icon-add-to-cart.png);
+background-repeat: no-repeat;
+width: 60px;
+height: 60px;
+border: none;
+float: right;
+display: block;
+}
+
+.add_to_cart_button:hover {
+background: url(images/icon-add-to-cart-hover.png);
 }
