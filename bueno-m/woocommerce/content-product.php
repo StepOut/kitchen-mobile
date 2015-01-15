@@ -39,7 +39,6 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
-	<a href="<?php the_permalink(); ?>">
 
 		<?php
 			/**
@@ -50,8 +49,19 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 			 */
 			do_action( 'woocommerce_before_shop_loop_item_title' );
 		?>
-
+		<div class="row">
 		<h3><?php the_title(); ?></h3>
+        <?php
+			/**
+			 * bueno_product_desc_after_title
+			 * shows product description
+			 */
+			 
+			do_action( 'bueno_product_desc_after_title' );
+		?>
+        </div>
+        <div class="row">
+      		<div class="other-product-details">
 		<?php
 				/**
 			 	* bueno_other_product-serves hook
@@ -69,8 +79,8 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 			 */
 			do_action( 'woocommerce_after_shop_loop_item_title' );
 		?>
+        </div>
 
-	</a>
 
 	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 
