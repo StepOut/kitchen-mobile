@@ -84,7 +84,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 		?>
     </div>
     <!--<div class="content-loader"></div>-->
-    <div class="row">
+    <div class="product-info">
       <div class="other-product-details">
         <?php
 				/**
@@ -162,12 +162,12 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 <li <?php post_class( $classes ); ?> id="bueno-package-tiles">
 	<div class="row" id="card">
   		<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
-  		<div class="col-md-12 left">
-      		<h3>
+  		<div class="package-title">
+      		
         	<?php the_title(); ?>
-      		</h3>
+      		
   		</div>
-        <div class="col-md-12 right">
+        <div class="package-info">
             <div class="package-detail">
             	<div class="col-md-12">
                 	<?php
@@ -192,7 +192,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 						do_action( 'woocommerce_after_shop_loop_item_title' );
 						?>
                 
-                		<?php echo ' / pax'; ?><br />
+                		<?php echo ' / pax'; ?><br clear="all" />
                 		<?php echo 'Minimum 10 pax'; ?>
                 	</div>
      				<div class="wrapper-add-to-cart">
