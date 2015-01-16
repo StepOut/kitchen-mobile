@@ -49,7 +49,7 @@ body {
 		//do_action( 'woocommerce_sidebar' );
 		//get_sidebar('content-top');
 	?>
-  <h2>My Menu</h2>
+  <h1>My Menu</h1>
   <form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post" id="form-cart">
   <div class="col-md-8">
     <?php do_action( 'woocommerce_before_cart_table' ); ?>
@@ -233,8 +233,6 @@ if (!isset($_SESSION)) { session_start();}
     </div>
     
     <p>Delivery Date: <input type="text" id="datetimepicker3" placeholder="Please Select Date and Time" disabled/> </p>
-    <p>Want it earlier? <a href="<?php echo get_home_url(); ?>/request-a-call/" style="color:#f05a28;">Click here</a>
-    </p>
     <?php } ?>
   </div>
   <div class="cart-collaterals">
