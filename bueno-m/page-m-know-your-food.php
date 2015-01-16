@@ -31,7 +31,7 @@
     <div class="post-padding"></div>
     <!-- section -->
     <section role="main">
-      <?php $latest = new WP_Query('showposts=50&cat=136'); ?>
+      <?php $latest = new WP_Query('showposts=-1&cat=136'); ?>
       <?php while( $latest->have_posts() ) : $latest->the_post(); ?>
       <p>
         <?php the_title(); ?>
