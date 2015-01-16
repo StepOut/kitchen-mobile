@@ -495,6 +495,21 @@ function bueno_display_product_serves(){
 		}
 }
 
+// adds data to custom session
+add_action('bueno_add_user_custom_data_options', 'bueno_add_user_custom_data_options_callback');
+
+function bueno_add_user_custom_data_options_callback()
+{
+      //Custom data - Sent Via AJAX post method
+      $product_id = $_POST['id'];
+      $spcl_cmnt =  $_POST['spcl_cmnt']; //This is User custom value sent via AJAX
+	  $product_key = $_POST['key'];
+      session_start();
+      $_SESSION['spcl_cmnt'][$product_id] = $spcl_cmnt;
+      
+	  //die();
+}
+
 // Remove wp_head() injected Recent Comment styles
 function my_remove_recent_comments_style()
 {
