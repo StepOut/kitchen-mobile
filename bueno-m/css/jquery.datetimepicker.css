@@ -1,10 +1,7 @@
 .xdsoft_datetimepicker{
 	box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.506);
 	background: #FFFFFF;
-	border-bottom: 1px solid #BBBBBB;
-	border-left: 1px solid #CCCCCC;
-	border-right: 1px solid #CCCCCC;
-	border-top: 1px solid #CCCCCC;
+	
 	color: #333333;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	padding: 8px;
@@ -152,9 +149,10 @@
 	margin-top: 8px;
 }
 .xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_time_box{
-	height:151px;
-	overflow:hidden;
-	border-bottom:1px solid #DDDDDD;
+	height: 151px;
+overflow: hidden;
+border-bottom: 1px solid #DDDDDD;
+margin-top: 30px;
 }
 .xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_time_box >div >div{
 	background: #F5F5F5;
