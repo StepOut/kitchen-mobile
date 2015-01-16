@@ -32,7 +32,7 @@
 									<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/splash-01.png" class="img-responsive" style="margin:100px auto auto auto;" />	                        
                                 </div>
                                 <div class="btns">
-                                    <a class="btn btn-large btn-primary" href="order">Explore</a>
+                                    <a class="btn btn-large btn-primary" href="m/menumaker/get-started">Explore</a>
                                     <!--a class="btn btn-large btn-gray" href="order">Order</a-->
                                 </div>
                             </div>
