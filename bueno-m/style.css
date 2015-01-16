@@ -1573,3 +1573,57 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 cursor: pointer;
 }
 
+
+/* ------------------ */
+/*   Package Styles   */
+/* ------------------ */
+
+/* Package Tiles */
+
+.package-info {
+	width: 50%;
+	float: right;
+}
+#card, #card h3 {
+	color:#fff;
+}
+#card span.price {
+	float:left;
+}
+#card span.amount {
+	color:#fff !important;
+	font-weight: 700;
+	margin-right: 4px;
+}
+.green-tile  {
+	background: #758755;
+}
+.red-tile {
+	background: #be1e2d;
+}
+.blue-tile {
+	background: #00a79e;
+}
+.pink-tile  {
+	background: #c75c5c;
+}
+.orange-tile {
+	background: #e1995f;
+}
+.package-title {
+	width: 40%;
+	display: block;
+	margin-right: 10px;
+	margin-top:25px;
+	font-size: 27px;
+	line-height: 26px;
+	float: left;
+	font-weight:700;
+}
+#bueno-package-tiles {
+	padding:4px 8px;
+}
+#card .add_to_cart_button {
+	background: url(images/icon-add-to-cart-white.png) !important;
+	float: right !important;
+}
