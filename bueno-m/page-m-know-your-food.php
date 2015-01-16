@@ -5,7 +5,7 @@
 <?php get_header(); ?>
 <style>
 #maincontent {
-	background-image: url(http://stepoutsolutions.org/projects/bueno/wp-content/themes/Bueno/images/bg_know-your-food.jpg);
+	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_know-your-food.jpg);
 	background-size:contain;
 	color: #fff;
 }
@@ -27,7 +27,7 @@
 
 <div class="wmffcontainer">
   <div id="m-pg-know-your-food">
-  <h2>Things About Food</h2>
+  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/know-food-01.png" alt="Things About Food" style="margin-top:20px;" />
     <div class="post-padding"></div>
     <!-- section -->
     <section role="main">
