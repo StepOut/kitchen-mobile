@@ -645,9 +645,24 @@ function bueno_custom_pre_get_posts_query( $q ) {
 
 }
 
+/*------------------------------------*\
+	Rename Add to Cart button text
+\*------------------------------------*/
+
+
+// Rename Add to Cart button text on order page
 add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' );    // 2.1 +
  
 function woo_archive_custom_cart_button_text() {
+ 
+        return __( '', 'woocommerce' );
+ 
+}
+
+// Rename Add to Cart button text on prduct details page
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );    // 2.1 +
+ 
+function woo_custom_cart_button_text() {
  
         return __( '', 'woocommerce' );
  
