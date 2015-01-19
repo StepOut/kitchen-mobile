@@ -559,21 +559,21 @@ function bueno_display_user_saved_orders(){
 	foreach ($userData as $key => $value) {
   		if (preg_match("/^savedCart-([0-9]*)/", $key)) {
 			$unserialized = unserialize($value[0]);
-			echo '<div class="row" id="m_align_bottom">
-					<div class="col-md-3" id="wid_2564_menu">
+			echo '<div class="row">
+					<div class="col-md-3" id="wid_254_menu">
 						<form method="post">
-							<input type="text" class="order-name" id="m_save_menuss" name="menu-name" value="'.$userData['name'.$key]['0'].'">
+							<input type="text" class="order-name" name="menu-name" value="'.$userData['name'.$key]['0'].'">
 							<input type="hidden" name="menu-key" value="name'.$key.'">
 							<input type="submit" value="Save" id="menu_sav_button">
 						</form>
 					</div>'.
 					/*<div class="order-item-quant col-md-3">15</div>*/
-					'<div class="order-saved-on col-md-3" id="m_save_menuss1">'.$userData['date'.$key]['0'].'</div>
+					'<div class="order-saved-on col-md-3">'.$userData['date'.$key]['0'].'</div>
 					 <div class="view-saved-order col-md-2">
 						<form action="'.get_home_url().'/saved-menu" method="post">
 							<input type="hidden" value="'.$key.'" name="saved_cart_key">
 							<input type="hidden" value="'.$user_id.'" name="user_key">
-							<input type="submit" value="View" name="view-saved-menu" id="m_save_menuss2" />
+							<input type="submit" value="View Menu" name="view-saved-menu" />
 						</form>
 					</div>
 					<div class="remove-saved-order col-md-1">
@@ -581,7 +581,7 @@ function bueno_display_user_saved_orders(){
 							<input type="hidden" value="'.$key.'" name="saved_cart_key">
 							<input type="hidden" value="'.$value.'" name="saved_cart_value">
 							<input type="hidden" value="'.$user_id.'" name="user_key">
-							<input type="submit" value="X" name="remove-saved-menu" id="m_save_menuss3" />
+							<input type="submit" value="X" name="remove-saved-menu" />
 						</form>
 					</div>
 				</div>';
@@ -590,7 +590,6 @@ function bueno_display_user_saved_orders(){
   		}
 	}
 }
-
 
 // restores the saved cart for editing
 add_action('bueno_restore_saved_cart','bueno_restore_saved_card_details');

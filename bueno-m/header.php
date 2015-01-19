@@ -161,3 +161,10 @@
 					if (function_exists('wmf_mobile_breadcrumbs')) wmf_mobile_breadcrumbs(); 
 				}
 				?>
+				<?php if(!(is_user_logged_in())){ ?>
+                	<style>
+						li#menu-item-2477{
+							display:none !important;
+						}
+					</style>
+   				<?php } ?>

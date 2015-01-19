@@ -184,7 +184,7 @@ body {
   <div class="col-md-4">
   <div id="cart-page-calc">
   <div colspan="6" class="actions">
-  <div class="order-summary lato-black-italic"> <span>Add a Service (Charges Extra)*</span> </div>
+  <h3>Add a Service (Charges Extra)*</h3>
 
 <form role="form">
   <div id="add-service">
