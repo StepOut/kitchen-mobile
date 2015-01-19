@@ -52,7 +52,7 @@ if(isset($_POST['remove-saved-menu']) && $_POST['user_key'] && $_POST['saved_car
     	<div class="col-md-3"><?php _e( 'Menu Name', 'woocommerce' ); ?></div>
 		<!--<div class="col-md-3"><?php //_e( 'Items', 'woocommerce' ); ?></div>-->
 		<div class="col-md-3"><?php _e( 'Saved on', 'woocommerce' ); ?></div>
-		<div class="col-md-2"><?php _e( 'Details', 'woocommerce' ); ?></div>
+		<div class="col-md-2" id="menu_title_all"><?php _e( 'Details', 'woocommerce' ); ?></div>
 		<div class="col-md-1"><?php _e( 'Remove', 'woocommerce' ); ?></div>
     	<?php
 		//break;

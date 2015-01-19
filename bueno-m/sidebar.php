@@ -1,6 +1,5 @@
 <!-- sidebar -->
-<aside class="sidebar" role="complementary">
-    		
+<aside class="sidebar" role="complementary">		
 	<div class="sidebar-widget">
 		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('mobili-widget-area-1')) ?>
 	</div>
