@@ -520,106 +520,8 @@ function my_remove_recent_comments_style()
     ));
 }
 
-// saves cart to my account
-add_action('bueno_save_cart','bueno_save_cart_for_user' );
-function bueno_save_cart_for_user(){
-  global $woocommerce;
-
-  // get user details
-  global $current_user;
-  get_currentuserinfo();
-
-  if (is_user_logged_in())
-  {
-    $user_id = $current_user->ID;
-    $cart_contents = $woocommerce->cart->get_cart();
-	//$cart_contents['menuName'] = 'my menu x';
-	//$cart_contents[2] = $woocommerce->cart->cart_contents_count;
-	$time = time();
-    $meta_key = 'savedCart-'.date('ldSF').$time;
-    $meta_value = $cart_contents;
-    update_user_meta( $user_id, $meta_key, $meta_value);
-	$current_date  = date('M d, o');
-	update_user_meta( $user_id, 'date'.$meta_key, $current_date);
-  }
-}
-
-// displayes saved orders by customer
-add_action('bueno_display_saved_orders','bueno_display_user_saved_orders');
-function bueno_display_user_saved_orders(){
-	global $woocommerce;
-
-  	// get user details
-  	global $current_user;
-  	get_currentuserinfo();
-	
-	$user_id = $current_user->ID;
-	$userData = get_user_meta($user_id);
-	$i= '1';
-	foreach ($userData as $key => $value) {
-  		if (preg_match("/^savedCart-([0-9]*)/", $key)) {
-			$unserialized = unserialize($value[0]);
-			echo '<div class="row" id="m_align_bottom">
-					<div class="col-md-3" id="wid_2564_menu">
-						<form method="post">
-							<input type="text" class="order-name" id="m_save_menuss" name="menu-name" value="'.$userData['name'.$key]['0'].'">
-							<input type="hidden" name="menu-key" value="name'.$key.'">
-							<input type="submit" value="Save" id="menu_sav_button">
-						</form>
-					</div>'.
-					/*<div class="order-item-quant col-md-3">15</div>*/
-					'<div class="order-saved-on col-md-3" id="m_save_menuss1">'.$userData['date'.$key]['0'].'</div>
-					 <div class="view-saved-order col-md-2">
-						<form action="'.get_home_url().'/saved-menu" method="post">
-							<input type="hidden" value="'.$key.'" name="saved_cart_key">
-							<input type="hidden" value="'.$user_id.'" name="user_key">
-							<input type="submit" value="View" name="view-saved-menu" id="m_save_menuss2" />
-						</form>
-					</div>
-					<div class="remove-saved-order col-md-1">
-						<form action="'.get_home_url().'/saved-menu" method="post">
-							<input type="hidden" value="'.$key.'" name="saved_cart_key">
-							<input type="hidden" value="'.$value.'" name="saved_cart_value">
-							<input type="hidden" value="'.$user_id.'" name="user_key">
-							<input type="submit" value="X" name="remove-saved-menu" id="m_save_menuss3" />
-						</form>
-					</div>
-				</div>';
-			//print_r($key); 
-			$i++;
-  		}
-	}
-}
-
-
-// restores the saved cart for editing
-add_action('bueno_restore_saved_cart','bueno_restore_saved_card_details');
-function bueno_restore_saved_card_details(){
-  	$cart_content=get_user_meta($_POST['user_key'],$_POST['saved_cart_key'],true);
-	global $woocommerce;
-	global $current_user;
-  	get_currentuserinfo();
-  	// clear current cart, incase you want to replace cart contents, else skip this step
-  	$woocommerce->cart->empty_cart();
-	// add cart contents
-	//print_r($cart_content);
-	foreach ( $cart_content as $cart_item_key => $values ){
-   		$id =$values['product_id'];
-   		$quant=$values['quantity'];
-   		$woocommerce->cart->add_to_cart( $id, $quant);
-	}
-}
-
-// removes the saved cart
-add_action('bueno_remove_saved_cart','bueno_remove_saved_card_details');
-function bueno_remove_saved_card_details(){
-  		delete_user_meta($_POST['user_key'],$_POST['saved_cart_key']);
-		delete_user_meta($_POST['user_key'],'name'.$_POST['saved_cart_key']);
-		delete_user_meta($_POST['user_key'],'date'.$_POST['saved_cart_key']);
-}
-
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
-/*function mobiliwp_pagination()
+function mobiliwp_pagination()
 {
     global $wp_query;
     $big = 999999999;
@@ -630,7 +532,7 @@ function bueno_remove_saved_card_details(){
         'total' => $wp_query->max_num_pages,
 		'type' => 'list',
     ));
-}*/
+}
 
 
 // Create the Custom Excerpts callback
